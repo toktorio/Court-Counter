@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.timotiusoktorio.courtcounter.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/team_scores_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/TeamColumnContainer">
+
+                <TextView
+                    style="@style/TeamLabelTextView"
+                    android:text="@string/text_view_team_a_label" />
+
+                <TextView
+                    android:id="@+id/team_A_score_text_view"
+                    style="@style/TeamScoreTextView"
+                    tools:text="9" />
+
+                <Button
+                    android:id="@+id/team_A_3_points_button"
+                    style="@style/ScoreButton"
+                    android:onClick="addScoreForTeamA"
+                    android:text="@string/button_3_points" />
+
+                <Button
+                    android:id="@+id/team_A_2_points_button"
+                    style="@style/ScoreButton"
+                    android:onClick="addScoreForTeamA"
+                    android:text="@string/button_2_points" />
+
+                <Button
+                    android:id="@+id/team_A_free_throw_button"
+                    style="@style/ScoreButton"
+                    android:onClick="addScoreForTeamA"
+                    android:text="@string/button_free_throw" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout style="@style/TeamColumnContainer">
+
+                <TextView
+                    style="@style/TeamLabelTextView"
+                    android:text="@string/text_view_team_b_label" />
+
+                <TextView
+                    android:id="@+id/team_B_score_text_view"
+                    style="@style/TeamScoreTextView"
+                    tools:text="5" />
+
+                <Button
+                    android:id="@+id/team_B_3_points_button"
+                    style="@style/ScoreButton"
+                    android:onClick="addScoreForTeamB"
+                    android:text="@string/button_3_points" />
+
+                <Button
+                    android:id="@+id/team_B_2_points_button"
+                    style="@style/ScoreButton"
+                    android:onClick="addScoreForTeamB"
+                    android:text="@string/button_2_points" />
+
+                <Button
+                    android:id="@+id/team_B_free_throw_button"
+                    style="@style/ScoreButton"
+                    android:onClick="addScoreForTeamB"
+                    android:text="@string/button_free_throw" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/team_scores_container"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="resetScores"
+                android:text="@string/button_reset" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

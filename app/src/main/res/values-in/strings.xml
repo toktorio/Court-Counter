@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="button_3_points">+3 poin</string>
+    <string name="button_2_points">+2 poin</string>
+    <string name="button_free_throw">lempar bebas</string>
+    <string name="button_reset">ulang</string>
+
+    <string name="text_view_team_a_label">Tim A</string>
+    <string name="text_view_team_b_label">Tim B</string>
+
+</resources>
